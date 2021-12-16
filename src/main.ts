@@ -9,7 +9,7 @@ export class Demo extends Construct {
     super(scope, id);
 
     new BashExecFunction(this, 'BashFunc', {
-      script:  "", //path.join( __dirname, 'demo.sh'),
+      script:  path.join( __dirname, 'demo.sh'),
     })
     define resources here...
   }
