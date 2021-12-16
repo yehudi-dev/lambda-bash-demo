@@ -23,13 +23,11 @@
     "projen": "npx projen"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.133.0",
-    "@aws-cdk/assertions": "^1.133.0",
     "@types/jest": "*",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk": "^1.133.0",
+    "aws-cdk": "^2.0.0",
     "esbuild": "^0.14.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
@@ -45,10 +43,9 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "@aws-cdk/core": "^1.133.0",
-    "aws-cdk-lib": "2.0.0-rc.16",
-    "cdk-lambda-bash": "^2.0.3",
-    "constructs": "^3.2.27"
+    "aws-cdk-lib": "^2.0.0",
+    "cdk-lambda-bash": "^2",
+    "constructs": "^10.0.5"
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",
