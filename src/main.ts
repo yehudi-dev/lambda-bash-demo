@@ -11,7 +11,7 @@ export class Demo extends Construct {
     new BashExecFunction(this, 'BashFunc', {
       script:  path.join( __dirname, 'demo.sh'),
     })
-    define resources here...
+    //define resources here...
   }
 }
 
