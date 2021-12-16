@@ -1,6 +1,7 @@
-import { App, Construct, Stack } from '@aws-cdk/core';
-import { BashExecFunction } from 'cdk-lambda-bash';
 import * as path from 'path';
+import { App, Stack } from 'aws-cdk-lib';
+import { BashExecFunction } from 'cdk-lambda-bash';
+import { Construct } from 'constructs';
 
 export interface DemoProps {}
 
@@ -9,9 +10,8 @@ export class Demo extends Construct {
     super(scope, id);
 
     new BashExecFunction(this, 'BashFunc', {
-      script:  path.join( __dirname, 'demo.sh'),
-    })
-    //define resources here...
+      script: path.join(__dirname, './demo.sh'),
+    });
   }
 }
 
@@ -23,7 +23,7 @@ const devEnv = {
 
 const app = new App();
 
-const stack = new Stack(app,'my-stack-dev', { env: devEnv });
-new Demo(stack,'Demo')
+const stack = new Stack(app, 'my-stack-dev', { env: devEnv });
+new Demo(stack, 'Demo');
 
 app.synth();
